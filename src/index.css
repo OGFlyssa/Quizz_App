@@ -5,3 +5,12 @@
   padding: 0;
   color: #333333;
 }
+body {
+  margin: 0;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}

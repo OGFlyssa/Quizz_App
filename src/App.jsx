@@ -23,6 +23,12 @@ function App() {
 
   function triviaSetup(event){
     const {name, value} = event.target
+    if(name=== "numberOfQuestions"){
+      if (value < 5 || value > 50) {
+        alert("Please enter a number between 5 and 50.");
+        return
+      }
+    }
 setTriviaConfig(oldTriviaConfig=>({
   ...oldTriviaConfig,
   [name]: value
