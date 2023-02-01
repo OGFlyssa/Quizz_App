@@ -139,3 +139,19 @@ background-color: none ;
   background-color: none;
 }
 
+.exit{
+position: absolute;
+display: fixed;
+border: none;
+background: none;
+cursor: pointer;
+font-size: 4rem;
+top: 5%;
+right: 5%;
+}
+
+.exit:hover{
+  font-size: 5rem;
+  right: 4.5%;
+  top:4.5%;
+}

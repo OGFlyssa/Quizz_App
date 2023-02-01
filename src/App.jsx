@@ -63,7 +63,7 @@ function fetchData(){
   .then(response => response.json())
   // .then(data =>  setTrivia(data.results)) funciona perfecto
   .then(data => setTrivia(()=>{
-    ///takes requested data and maps it into state to add an ID generated dynamically with nanoID
+    ///takes requested data and maps it into st ate to add an ID generated dynamically with nanoID
     const newTrivia = data.results.map(item=> {
       return{
         ...item, 
@@ -116,6 +116,9 @@ const questionItems = trivia.map(item=>
   return (
     <main>
 {gameStarted?<div className='game'>
+  <button className='exit' type='button' title='Exit and reset'
+  onClick={()=>setGameStarted(false)}
+  >X</button>
   {questionItems}
   {gameEnded&&<p>Score: {gameScore}/{trivia.length}</p>}
   {gameEnded?<button 
